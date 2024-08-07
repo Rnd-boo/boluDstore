@@ -14,6 +14,10 @@
       href="https://fonts.googleapis.com/css2?family=Lusitana:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <title>boluDstore</title>
   </head>
   <body>
@@ -21,14 +25,33 @@
       <nav class="navbar">
         <img src="pic/Bolu-logo.png" alt="Logo-boluDstore" id="beranda" />
         <ul id="navbar1">
-          <li>Top Up Game</li>
-          <li>Jasa Joki</li>
-          <li>Kalkulator</li>
+          <li><a href="#" class="navigation">Top Up Game</a></li>
+          <li><a href="#" class="navigation">Jasa Joki</a></li>
+          <li><a href="#" class="navigation">Kalkulator</a></li>
         </ul>
       </nav>
       <ul id="navbar2">
-        <li><i class="fa-solid fa-magnifying-glass"></i></li>
+        <li><i class="fa-solid fa-magnifying-glass search"></i></li>
       </ul>
     </header>
+    <div class="container"></div>
+
+
+
+    <script>
+      var navBar = document.getElementById("navbar1");
+
+      var btns = navBar.getElementsByClassName("navigation");
+
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function () {
+          var current = document.getElementsByClassName("active");
+          if (current.length > 0) {
+            current[0].className = current[0].className.replace(" active", "");
+          }
+          this.className += " active";
+        });
+      }
+    </script>
   </body>
 </html>
