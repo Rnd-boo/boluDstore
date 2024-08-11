@@ -21,37 +21,38 @@
     <title>boluDstore</title>
   </head>
   <body>
+    <!-- Start Navbar -->
     <header>
       <nav class="navbar">
-        <img src="pic/Bolu-logo.png" alt="Logo-boluDstore" id="beranda" />
+        <a href="#beranda"
+          ><img src="pic/Bolu-logo.png" alt="Logo-boluDstore" id="beranda"
+        /></a>
         <ul id="navbar1">
+          <li><a href="#" class="navigation">Beranda</a></li>
           <li><a href="#" class="navigation">Top Up Game</a></li>
           <li><a href="#" class="navigation">Jasa Joki</a></li>
-          <li><a href="#" class="navigation">Kalkulator</a></li>
         </ul>
       </nav>
       <ul id="navbar2">
         <li><i class="fa-solid fa-magnifying-glass search"></i></li>
       </ul>
     </header>
-    <div class="container"></div>
+    <!-- End navBar -->
 
+    <!-- Start Banner -->
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img src="pic/BANNER 1.jpg" alt="" style="width: 100%" />
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img src="pic/banner 2.jpg" alt="" style="width: 100%" />
+      </div>
+    </div>
 
-
-    <script>
-      var navBar = document.getElementById("navbar1");
-
-      var btns = navBar.getElementsByClassName("navigation");
-
-      for (var i = 0; i < btns.length; i++) {
-        btns[i].addEventListener("click", function () {
-          var current = document.getElementsByClassName("active");
-          if (current.length > 0) {
-            current[0].className = current[0].className.replace(" active", "");
-          }
-          this.className += " active";
-        });
-      }
-    </script>
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="prev" onclick="plusSlides(1)">&#10095;</a>
+    <script src="script.js"></script>
   </body>
 </html>
