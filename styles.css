@@ -30,7 +30,8 @@ header {
   display: flex;
   justify-content: space-between;
   color: var(--additional-color);
-  position: fixed;
+  position: sticky;
+  top: 0;
   border-bottom: 1.5px solid var(--primary-color);
 }
 
